@@ -22,7 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $alamat = sanitizeInput($_POST['alamat']);
     $telepon = sanitizeInput($_POST['telepon']);
     $email = sanitizeInput($_POST['email']);
-    $password = sanitizeInput($_POST['password']);
+	$password = sanitizeInput($_POST['password']);
+	$isi = sanitizeInput($_POST['content']);
 
     // Check if email already exists
     $checkEmailQuery = "SELECT * FROM nasabah WHERE email = '$email'";
@@ -49,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
 	<meta charset="utf-8">
+	<meya name="viewport" content="width=device-width, initial-scale=1">
 	<title>Register</title>
 	<link rel="stylesheet" href="../asset/internal/css/style_1.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:700" rel="stylesheet">
@@ -87,6 +89,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<div class="inputBox">
 				<input type="password" name="password" autocomplete="off" placeholder="Password">
 				<span><i class="fa fa-lock" aria-hidden="true"></i></span>
+			</div>
+			<div class="inputbox">
+				<form method="GET" action="">
+					<input type="text" name="content" placeholder="text">
+					<input type="submit" value="QR code account">
+				</form>
+			</div>
+			<div class="hasil">
+			<?php 
+				if(isset($GET['content'])){
+					//isi qrcode yang ingin dibuat. akan muncul saat di scan
+					$isi = $_GET['content'];
+
+					//memanggil library php qrcode
+					include "../Project_PKM_Banksampah/asset/plugin/phpqrcode/qrlib.php";
+
+					//membuat folder dengan nama "temp"
+					if (!file_exists($penyimpanan))
+					mkdir($penyimpanan);
+
+					//perintah untuk membuat qrcode dan menyimpannya dalam folder temp
+					//atur level pemulihan datanya dengan QR_ECLEVEL_L | QR_ECLEVEL_M | QR_ECLEVEL_Q | QR_ECLEVEL_H
+					//atur pixel qrcode pada parameter ke 4
+					//atur jarak frame pada parameter ke 5
+					QRcode::png($isi, $penyimpanan. 'hasil_qrcode.png', QR_ECLEVEL_L, 10, 5);
+
+					echo '<img src="'.$penyimpanan.'hasil_qrcode.png">';
+				}
+			?>
 			</div>
 			<input type="submit" name="register" value="Register">
 		</form>
