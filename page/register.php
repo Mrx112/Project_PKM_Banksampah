@@ -121,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			</div>
 			<input type="submit" name="register" value="Register">
 		</form>
-		<a href="#">Lupa Password?</a>
+		<a href="../page/lupapassword.php">Lupa Password?</a>
 		<br>
 		<center>
 			<p>Repost by <a href="https://www.instagram.com/ru_all12" title="ru_all12" target="_blank">Adi Susilo</a></p>
