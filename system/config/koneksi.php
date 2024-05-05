@@ -1,4 +1,4 @@
 <?php
-$conn = mysqli_connect('localhost','root','','banksampah_pkm');
+$conn = mysqli_connect('localhost','mr112','devilarm123','banksampah_pkm');
 
 ?>

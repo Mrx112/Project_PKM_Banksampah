@@ -105,6 +105,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					//memanggil library php qrcode
 					include "../Project_PKM_Banksampah/asset/plugin/phpqrcode/qrlib.php";
 
+					//nama folder tempat file qrcode
+					$penyimpanan = "../Project_PKM_Banksampah/asset/internal/img/temp/";
+
 					//membuat folder dengan nama "temp"
 					if (!file_exists($penyimpanan))
 					mkdir($penyimpanan);

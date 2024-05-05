@@ -44,7 +44,7 @@ body{
 .center{
 	position: absolute; padding-top: 30px;
     left: 50%;
-    transform: translate(-50%,-50%);"
+    transform: translate(-50%,-50%);
 }
 
 .btn{
@@ -176,12 +176,12 @@ background:#8cd91a;
 .row .coloumn .details{
 	position: absolute;
 	bottom: -85px;
-	left: 0
-	padding:10px;
+	left: 0;
+	padding: 10px;
 	box-sizing: border-box;
-	background: rgba(0,0,0,.9);
+	background: rgb(0, 0, 0, 0.9);
 	width: 100%;
-	transition: .5s;
+	transition: bottom 0.5s; /* Mengubah transition agar hanya animasi bottom yang terjadi */
 	z-index: 2;
 }
 
