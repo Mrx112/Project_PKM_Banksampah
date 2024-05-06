@@ -17,7 +17,7 @@
 <body>
 	<div class="loginBox">
 		<h1>LUPA PASSWORD</h1>
-		<form action="cek_login.php" method="post">
+		<form action="cek_forget.php" method="post">
             <div class="inputbox">
             <input type="text" name="email" autocomplete="off" placeholder="Masukan email">
             <span><i class="fa fa fa-email" aria-hidden="true"></i></span>
