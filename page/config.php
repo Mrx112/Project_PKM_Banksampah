@@ -1,7 +1,7 @@
 <?php
 $DB_host = "localhost";
-$DB_user = "mr112";
-$DB_pass = "devilarm123";
+$DB_user = "root";
+$DB_pass = "";
 $DB_name = "banksampah_pkm";
 
 try

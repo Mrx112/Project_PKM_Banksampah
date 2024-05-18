@@ -14,7 +14,7 @@
   echo "<script>alert('Selamat berhasil input data!')</script>";
 
   echo "<meta http-equiv='refresh'
-   content='0; url=http://localhost/bsk09/page/admin.php?page=data-setor'>";
+   content='0; url=http://localhost/Project_PKM_Banksampah/page/admin.php?page=data-setor'>";
 
  }
  ?>

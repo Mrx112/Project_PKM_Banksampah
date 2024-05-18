@@ -11,7 +11,7 @@
   $query = "UPDATE admin SET nama = '$nama', telepon = '$telepon', email = '$username', password = '$password' WHERE nia='".$id."' ";
   $queryact = mysqli_query($conn, $query);
   echo "<meta http-equiv='refresh'
-   content='0; url=http://localhost/bsk09/page/admin.php?page=data-admin-full'>";
+   content='0; url=http://localhost/Project_PKM_Banksampah/page/admin.php?page=data-admin-full'>";
  }
 
 ?>
