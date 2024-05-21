@@ -1,9 +1,13 @@
 <?php
 session_start();
-if (empty($_SESSION['user_n']) && empty($_SESSION['pass_n'])) {header('location:login.php');} 
-else {   
+if (empty($_SESSION['user_n']) && empty($_SESSION['pass_n'])){
+	header('location:login.php');
+	exit();
+}
+
 error_reporting(E_ALL | E_STRICT); 
 include_once("../system/config/koneksi.php");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -95,4 +99,3 @@ include_once("../system/config/koneksi.php");
 
 	</body>
 </html>
-<?php } ?>
