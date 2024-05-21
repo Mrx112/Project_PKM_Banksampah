@@ -53,7 +53,7 @@ class HTML2PDF_locale
         self::$_code = $code;
 
         // get the name of the locale file
-        $file = self::$_directory.self::$_code.'.csv';
+        $file = self::$_directory . self::$_code . '.csv';
 
         // the file must exist
         if (!is_file($file)) {
@@ -65,7 +65,7 @@ class HTML2PDF_locale
         $handle = fopen($file, 'r');
         while (!feof($handle)) {
             $line = fgetcsv($handle);
-            if (count($line)!=2) continue;
+            if (!is_array($line) || count($line)!=2) continue; // Ensure $line is an array
             self::$_list[trim($line[0])] = trim($line[1]);
         }
         fclose($handle);
