@@ -66,7 +66,11 @@ include_once("../system/config/koneksi.php");
 				</li>
 
 				<li>
-					<a href="admin.php?page=data-report"><span class="fa fa-line-chart" aria-hidden="true"></span>Grafik Monitoring</a>
+					<a href="admin.php?page=data-report"><span class="fa fa-line-chart" aria-hidden="true"></span>Grafik Data Nasabah</a>
+				</li>
+
+				<li>
+					<a href="admin.php?page=data-report-p"><span class="fa fa-line-chart" aria-hidden="true"></span>Grafik Pemasukan Keuangan</a>
 				</li>
 
 				<li>
@@ -131,6 +135,9 @@ include_once("../system/config/koneksi.php");
 							break;
 						case 'data-report':
 							include "../system/function/view-report.php";
+							break;
+						case 'data-report-p':
+							include "../system/function/view-report-p.php";
 							break;
 						case 'tambah-data-sampah':
 							include "../system/function/tambah-sampah.php";

@@ -49,7 +49,7 @@ include_once("../system/config/koneksi.php");
 				</li>
 
 				<li>
-					<a href="admin.php?page=data-report"><span class="fa fa-table" aria-hidden="true"></span>Report Data</a>
+					<a href="nasabah.php?page=data-report"><span class="fa fa-table" aria-hidden="true"></span>Report Data</a>
 				</li>
 
 				<li>

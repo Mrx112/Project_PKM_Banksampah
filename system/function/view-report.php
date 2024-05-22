@@ -1,5 +1,5 @@
 
-<h2 style="font-size: 30px; color: #262626;">Grafik Monitoring</h2>
+<h2 style="font-size: 30px; color: #262626;">Grafik Data Nasabah</h2>
 
 <div id="container"></div>
 
@@ -11,10 +11,10 @@
         type: 'area'
     },
     title: {
-        text: 'Data Jumlah Nasabah Tiap RT'
+        text: 'Data Jumlah Nasabah'
     },
     subtitle: {
-        text: 'Source: Bank Sampah Kenanga 09'
+        text: 'Source: Bank Sampah Resik Kutha Kota Surakarta'
     },
     xAxis: {
         categories: [<?php $query = mysqli_query($conn, "SELECT * FROM nasabah group by rt"); while($row = mysqli_fetch_array($query)){echo $row['rt'].","; } ?>],
@@ -49,7 +49,7 @@
         }
     },
     series: [ {
-        name: 'Nasabah RW. 009',
+        name: 'Nasabah Kota Surakarta',
         data: [<?php $query = mysqli_query($conn, "SELECT COUNT(nin) AS jiwa FROM nasabah group by rt"); while($row = mysqli_fetch_array($query)){echo ($row['jiwa']).","; } ?>]
     }]
 });
